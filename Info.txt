@@ -1,0 +1,17 @@
+Micha³ Leœniewski
+Kod zrodlowy gry "Kosmici atakuja"
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Do skompilowania gry potrzebny jest Borland Turbo Pascal w wersji 7.0. Niektóre starsze wersje tego kompilatora równie¿ powinny skompilowaæ kod, ale nie by³o to sprawdzane. 
+
+Aby gra siê skompilowa³a, wystarczy otworzyæ w œrodowisku plik g³ówny ("KOSMITA.PAS"). Pozosta³e pliki s¹ za³¹czane automatycznie dyrektyw¹ $I (include) i zostan¹ skompilowane w jedn¹ ca³oœæ. W przypadku niektórych kompilatorów / wersji nale¿y W£¥CZYÆ mo¿liwoœæ wstawiania poleceñ assemblerowych. Mo¿e równie¿ okazaæ siê konieczne W£¥CZENIE instrukcji 286 (przy problemach z poleceniem shl i shr). 
+
+Gra potrzebuje relatywnie du¿o pamiêci, wykorzystuje jedynie pamiêæ podstawow¹ (bez EMS, XMS). W zwi¹zku z tym gra mo¿e nie uruchomiæ siê bezpoœrednio po skompilowaniu ze œrodowiska TP. Nale¿y wówczas zamkn¹æ TP i uruchomiæ plik EXE z linii poleceñ.
+
+Nale¿y pamiêtaæ, ¿e w katalogu z plikiem EXE powinien byæ podkatalog GRAFIKA z ca³¹ zawartoœci¹. Inaczej gra siê nie uruchomi lub zawiesi.
+
+Lista plików:
+	KOSMITA.PAS	Plik g³ówny gry
+	GRAFIKA.PAS	Plik zawieraj¹cy procedury graficzne napisane czêœciowo w postaci "wstawek assemblerowych"
+	ZNAKI.PAS	Plik wykorzystywany przez GRAFIKA.PAS, zawiera tablicê bitow¹ wszystkich znaków (czcionkê)
+	MYSZ.PAS	Plik zawieraj¹cy procedury obs³uguj¹ce mysz. Równie¿ g³ównie w assemblerze.
