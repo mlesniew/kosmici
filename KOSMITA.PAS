@@ -197,7 +197,7 @@ begin
   end;
 end;
 
-{ ------ POCZ§TEK GRY ------ }
+{ ------ POCZƒÑTEK GRY ------ }
 procedure Resetuj;
   var i: integer;
 begin
@@ -309,7 +309,7 @@ begin
      Text(110, 8, 15, 'Naboje: ' + IntToStr(StatekGracza.naboje[StatekGracza.wybranabron]));
   end;
 
-  { TYTUù }
+  { TYTU≈Å }
   if (CzasWyswietlaniaNapisu >= 15) or ((CzasWyswietlaniaNapisu > 0) and (StatekGracza.czas mod 2 = 0)) then
   begin
      bSprPutTrans(160 - napis.sx div 2, 40, napis);
@@ -508,7 +508,7 @@ begin
   for z := 1 to ilepociskow do
     pociski[z].y := pociski[z].y - 2 * (4 - pociski[z].jaki);
 
-  { Sztuczna inteligencja kosmit¢w }
+  { Sztuczna inteligencja kosmit√≥w }
   for z := 1 to 15 do
   if wrogowie[z].aktywny then      { aktywni }
   begin
@@ -621,7 +621,7 @@ begin
       end;
 
 
-    { Zderzenia pocisk¢w z kosmitami }
+    { Zderzenia pocisk√≥w z kosmitami }
     for v := 1 to ilepociskow do
     begin
       if kolizja(pociski[v].x, pociski[v].y, 2, 2,

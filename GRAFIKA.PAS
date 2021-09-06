@@ -177,9 +177,9 @@ procedure SprPut(x, y: integer; sprite: spr);
   var ix, iy: word;
       xmin, xmax, ymin, ymax: word;
 begin
-  { prawo, d¢à }
+  { prawo, d√≥≈Ç }
   if (x > 319) or (y > 199) then exit;
-  { lewo, g¢ra }
+  { lewo, g√≥ra }
   if (x + sprite.sx - 1 < 0) or (y + sprite.sy - 1 < 0) then exit;
 
   { Obetnij krawedzie }
@@ -202,14 +202,14 @@ begin
     add di, xmin
     mov ax, 0a000h
     mov es, ax
-    { ´r¢dào - ustaw na sprite}
+    { ≈∫r√≥d≈Ço - ustaw na sprite}
     lds si, sprite.pic
-    { przesu‰ }
+    { przesu≈Ñ }
     mov ax, iy
     mul sprite.sx
     add si, ax
     add si, xmin
-    { iloòÜ }
+    { ilo≈õƒá }
     mov cx, xmax
     sub cx, xmin
     cld
@@ -227,9 +227,9 @@ procedure bSprPut(x, y: integer; sprite: spr);
   var ix, iy: word;
       xmin, xmax, ymin, ymax: word;
 begin
-  { prawo, d¢à }
+  { prawo, d√≥≈Ç }
   if (x > 319) or (y > 199) then exit;
-  { lewo, g¢ra }
+  { lewo, g√≥ra }
   if (x + sprite.sx - 1 < 0) or (y + sprite.sy - 1 < 0) then exit;
 
   { Obetnij krawedzie }
@@ -252,14 +252,14 @@ begin
     add di, x
     add di, xmin
     add di, bx
-    { ´r¢dào - ustaw na sprite}
+    { ≈∫r√≥d≈Ço - ustaw na sprite}
     lds si, sprite.pic
-    { przesu‰ }
+    { przesu≈Ñ }
     mov ax, iy
     mul sprite.sx
     add si, ax
     add si, xmin
-    { iloòÜ }
+    { ilo≈õƒá }
     mov cx, xmax
     sub cx, xmin
     cld
@@ -279,9 +279,9 @@ procedure bSprPutTrans(x, y: integer; sprite: spr);
       l: byte;
       trans: byte;
 begin
-  { prawo, d¢à }
+  { prawo, d√≥≈Ç }
   if (x > 319) or (y > 199) then exit;
-  { lewo, g¢ra }
+  { lewo, g√≥ra }
   if (x + sprite.sx - 1 < 0) or (y + sprite.sy - 1 < 0) then exit;
 
   { Obetnij krawedzie }
@@ -306,14 +306,14 @@ begin
     add di, x
     add di, xmin
     add di, bx
-    { ´r¢dào - ustaw na sprite}
+    { ≈∫r√≥d≈Ço - ustaw na sprite}
     lds si, sprite.pic
-    { przesu‰ }
+    { przesu≈Ñ }
     mov ax, iy
     mul sprite.sx
     add si, ax
     add si, xmin
-    { iloòÜ }
+    { ilo≈õƒá }
     mov cx, xmax
     sub cx, xmin
     mov ah, trans;
@@ -482,7 +482,7 @@ begin
     { litery wielkie }
     if (tekst[znak] >= 'A') and (tekst[znak] <= 'Z') then index := ord(tekst[znak]) - 54
     else
-    { litery maàe }
+    { litery ma≈Çe }
     if (tekst[znak] >= 'a') and (tekst[znak] <= 'z') then index := ord(tekst[znak]) - 60
     else index := 71;
     mask := $80;
