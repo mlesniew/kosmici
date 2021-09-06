@@ -1,4 +1,4 @@
-# Kosmici
+# Kosmici Atakują
 
 `Kosmici` is a simple shoot 'em up DOS game that I wrote in high school.
 
@@ -18,6 +18,22 @@ cd kosmita
 curl -L https://github.com/mlesniew/kosmici/releases/download/1.0/kosmita.tgz | zcat | tar -x
 dosbox kosmita.exe
 ```
+
+
+## Running with js-dos in the browser
+
+The game can also be run with [js-dos](https://js-dos.com/) in the browser.  The required server setup can be easily
+done with Docker:
+```
+git clone git@github.com:mlesniew/kosmici.git
+cd kosmici
+docker build -t kosmita .
+docker run --rm -p8000:8000 kosmita
+```
+
+The game will be available at [http://localhost:8000](http://localhost:8000).  Unfortunately, the game can be very
+slow when it's run this way.
+
 
 ## How to play
 

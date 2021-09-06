@@ -1,0 +1,25 @@
+<html>
+  <style type="text/css" media="screen">
+      canvas {
+          width: 400px; 
+          height: 300px;
+      }
+  </style>
+  <head>
+    <title>Kosmici Atakują!</title>
+    <script src="js-dos.js"></script>
+  </head>
+  <body>
+    <canvas id="jsdos" width="400" height="300" ></canvas>
+    <script>
+      Dos(document.getElementById("jsdos"), {
+          autolock: true,
+          cycles: "max"
+      }).ready((fs, main) => {
+        fs.extract("kosmita.zip").then(() => {
+          main(["-c", "kosmita.exe"])
+        });
+      });
+    </script>
+  </body>
+</html>
